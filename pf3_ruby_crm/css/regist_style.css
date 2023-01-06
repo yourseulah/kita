@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  font-family: SFS, Arial, sans-serif;
+}
+
+:root {
+  --border-color: rgb(216, 221, 230);
+}
+
+.main {
+  padding-top: 40px;
+  height: 100vh;
+}
+
+.wrapper {
+  margin: 0px auto;
+  max-width: 600px;
+}
+
+.content {
+  margin: 0px auto;
+  padding: 1.5rem;
+  border: 1px solid rgb(216, 221, 230);
+}
+
+.name{
+  display: flex;
+  align-items: stretch;
+}
+
+.phone{
+  display: flex;
+  align-items: stretch;
+}
+
+input[type=text], input[type=password], input[type=file]  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+}
+
+.password{
+  display: flex;
+  align-items: stretch;
+}
+
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+input[type=submit]  {
+  background-color: #e2393b;
+  color: white;
+  font-weight: bold;
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+      max-width: 100%;
+      margin-left: inherit;
+      padding-top: 20px !important;
+  }
+  }

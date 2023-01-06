@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="topnav">
+        <a href="#home"><img class="top-logo" src="./img/aict.jpg" alt="logo"></a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="price.html" target="_blank">Pricing</a>
+        <a href="#faculties">Faculties</a>
+        <a href="#aboutus">About us</a>
+        <div class="topnav-right">
+            <a href="#search"><i class="fa fa-search" style="font-size:24px"></i></a>
+            <!-- Button to open the modal login form -->
+            <button onclick="document.getElementById('id').style.display='block'" style="width: auto;">Login</button>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="id" class="modal">
+            <span onclick="document.getElementById('id').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="idContainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                    <button type="submit" class="loginbtn">Login</button>
+
+                    <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                </div>
+            
+                <div class="idContainer" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot &nbsp;<a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+
+<section class="container_1">
+    <div class="row">
+        <div class="two-column">
+            <div class="column-text">
+                <h1>Cloud Full-Stack Application Developer Training</h1>
+                <br>
+                <p>클라우드 풀스택 애플리케이션개발자 양성과정</p>
+                <br>
+
+                <!-- Button to open the signupModal -->
+                <button onclick="document.getElementById('signup').style.display='block'" style="width:auto;" class="btn start">Get Started</button>
+                <!--modal relocate to bottom-->
+            </div>
+            
+            <div class="column-img">
+                <img class="main-logo" src="./img/aict.jpg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container_2" id="faculties">
+    <div class="row">
+        <div class="prof">
+            <!-- Trigger/Open The Modal -->
+            <img id="leeImage" src="./img/unnamed.jpg" alt="Prof_Lee" onclick="showmodal('lee').style.display='block'">
+            <img id="hwangImage" src="./img/img_avatar2.png" alt="Prof_Hwang" onclick="showmodal('hwang').style.display='block'">
+        </div>
+    </div>
+    
+</section>
+
+<section class="container_3" id="aboutus"> 
+    <div class="row">
+        <div class="video">
+            <h1>Code your way to success
+            <br>
+            We will guide you every step of the way</h1>
+            <a class="learn-more" target="_blank" href="https://www.youtube.com/watch?v=DL2sfCPfX88&t=3s">Watch a video &#8250;</a>
+        </div>
+        
+    </div>
+</section>
+
+<section class="container_4" id="curriculum">
+    <div class="row">
+        <div class="curriculum">
+            <h2>Curriculum</h2>
+            <button class="accordion">1. &nbsp;Programming Basics and Applications</button>
+            <div class="panel">
+                Learn how to develop applications using object-oriented programming language Java and script programming language PHP
+                <br>
+                Learn the process of creating screens using html5/css/JS
+            </div>
+
+            <button class="accordion">2. &nbsp;Database utilization</button>
+            <div class="panel">
+                Learn how to store and manage data using relational DBMS such as Oracle and MySQL and SQL, and learn DB management skills with programming languages such as Java/PHP.
+            </div>
+
+            <button class="accordion">3. &nbsp;Front-end programming</button>
+            <div class="panel">
+                Based on UI design output and GUI standards, students learn programming skills to design and implement UI/UX. In particular, students focus on 2D and 3D UI implementation techniques using Unity 3D engine.
+            </div>
+
+            <button class="accordion">4. &nbsp;Back-end programming</button>
+            <div class="panel">
+                Learn how to develop fast web applications using open source frameworks such as Spring Framework and Laravel Framework
+            </div>
+
+            <button class="accordion">5. &nbsp;Cloud-based App implementation and distribution</button>
+            <div class="panel">
+                Learn the skills to build and deploy applications in a serverless cloud environment.
+            </div>
+
+            <button class="accordion">6. &nbsp;Projects</button>
+            <div class="panel">
+                By using the skills acquired during the training process, trainees conduct practical projects on their own.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container_5">
+    <div class="row">
+        <div class="programminglogos">
+            <img class="plogo fade" src="./img/html.png">
+            <img class="plogo fade" src="./img/java.png">
+            <img class="plogo fade" src="./img/php.png">
+            <img class="plogo fade" src="./img/sql.png">
+        </div>
+    </div>
+</section>
+
+<section class="container_6">
+    <div class="row">
+        <div class="footWrapper">
+            <ul id="footerGrid">
+                <!-- <li><img src="/img/aict.jpg" style="width:80px; height: 70px;"></li> -->
+                <li><h5>Curriculum</h5></li>
+                <li><h5>Professors</h5></li>
+                <li><h5>Pricing</h5></li>
+                <li><h5>Students</h5></li>
+                <li><h5>About us</h5></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="container_7">
+    <div class="row">
+        <div class="footer-bottom">
+            <div class="copyright">© 2021 AICT</div>
+            <div class="legal">
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookie Settings</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <div class="language">
+                    <select>
+                        <option>English</option>
+                        <option>한국어</option>
+                    </select>
+                </div>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="./img/facebook.png"></a></li>
+                    <li><a href="#" target="_blank"><img src="./img/github.png"></a></li>
+                    <li><a href="https://www.youtube.com/c/swcodingschool/playlists" target="_blank"><img src="./img/youtube.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- header 안 login모달을 제외한 section안에있는 모달은 밑으로 보내서 앞의 섹션들과 겹치지 않게 -->
+
+<!-- The Modal (contains the Sign Up form) -->
+<div id="signup" class="modal">
+    <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="signupContainer">
+            <h1>Sign Up</h1>
+            <br>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+        
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter email" name="email" required>
+    
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+    
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        
+            <label for="country"><b>Region</b></label>
+            <select id="country" name="country">
+                <option value="australia">Cheongju</option>
+                <option value="canada">Jeju</option>
+                <option value="usa">Ochang</option>
+            </select>
+            <br><br>
+            <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+        
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+        </div>
+
+            <div class="clearfix" style="background-color:#f1f1f1" >
+                <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+    </form>
+</div>
+
+<!-- The Modal -->
+<div id="leeModal" class="leeModal">
+    <!-- Modal content -->
+        <div class="leeModal-content">
+            <span onclick="showmodal('lee').style.display='none'" class="close">&times;</span>
+            <h1>이성종</h1>
+            <br>
+            <br>
+            <h2>대표교수</h2>
+            <br>
+            <h3>▶ 강의분야 ◀</h3>
+            <p>- JAVA, Python, C/C++, C#
+            - 빅데이터, 머신러닝/딥러닝
+            - 웹 애플리케이션 개발</p>
+            <br>
+            <br>
+            <h3>▶ 경력사항 ◀</h3>
+            <p>충청대학교 겸임교수
+            충북ICT산업협회 교육분과위원장</p>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="hwangModal" class="hwangModal">
+        <!-- Modal content -->
+        <div class="hwangModal-content">
+            <span  onclick="showmodal('hwang').style.display='none'" class="close">&times;</span>
+            <h1>황선민</h1>
+            <br>
+            <br>
+            <h2>대표교수</h2>
+            <br>
+            <h3>▶ 강의분야 ◀</h3>
+            <p>- 빅데이터, 머신러닝/딥러닝
+            - 웹 애플리케이션 개발</p>
+            <br>
+            <br>
+            <h3>▶ 경력사항 ◀</h3>
+            <p>공학박사(정보통신)
+            건국대학교 겸임교수</p>
+        </div>
+    </div>
+
+
+<script src="./js/main.js"></script>
+</body>
+
+</html>

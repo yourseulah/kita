@@ -1,0 +1,688 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gellix", "Apple SD Gothic Neo", "Nanum Gothic", sans-serif;
+}
+
+.header {
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  height: 70px;
+  width: 100%;
+  padding: 0 100px;
+  background-color: white;
+  z-index: 5;
+  /* border: 1px solid #000; */
+}
+
+.topnav {
+  font-weight: 600;
+  font-size: 18px;
+  height: 70px;
+  /* border: 1px dotted #000; */
+}
+
+.top-logo {
+  width: 80px;
+}
+
+.topnav > a {
+  float: left;
+  display: block;
+  color: #424242;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px 20px;
+  line-height: 70px;
+  /* 부모의 높이를 이미지 높이와 같이 해주고 그안의 각 메뉴컨테이너의 line-height 도 같은 높이로 지정하면 센터로 정렬 그 대신 padding 상하를 0px로*/
+}
+
+.topnav a:hover {
+  color: rgb(231, 54, 54);
+}
+
+.topnav-right {
+  float: right;
+  display: block;
+}
+
+
+/* -------------------------loginModal--------------------- */
+/* Full-width input fields */
+input[type=text], input[type=password], select {
+  width: 97%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  margin: auto 10px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:  #f7f7f7;
+  color: #0d0d0d;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 8px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 110px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the login button */
+.loginbtn {
+  border: 1px solid #ccc;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Center the image and position the close button */
+.idContainer {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+
+.psw :hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.psw a:visited, .psw a:link {
+  color: #212121;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto 15% auto; /* 10% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) prof div style과 같음 */
+
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.6s
+}
+
+/* @-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)} 
+} */
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+    width: 100%;
+  }
+}
+
+/* -----------<row>---------- */
+.row {
+  z-index: 10;
+  position: relative;
+}
+
+.row::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ----------section---------- */
+section {
+  padding: 70px 100px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  /* 뒤따라 나오는 아이들이 position:relative로 정의되어있어야하고 z-index를 fixed영역보다 적게 하지만 마이너스를 피할것! a태그들이 안먹힘*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -----------<section class="container_1">------------- */
+.container_1 {
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
+
+.two-column {
+  top: 70px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column-text {
+  width: 48%;
+  max-width: 700px;
+  padding: 0 15px;
+  /* border: 1px solid #000; */
+}
+
+.column-text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #0d0d0d;
+}
+
+.column-text p {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #424242;
+}
+
+@media only screen and (max-width :900px) {
+  .column-text,
+  .column-img {
+    width: 100%;
+  }
+  .two-column,
+  .column-text,
+  .column-img {
+    display:block;
+  }
+  .column-text h1 {
+  font-size: 48px;
+  }
+}
+
+/* ---------------------signupModal------------------- */
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+.signupbtn {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Add padding to container elements */
+.signupContainer {
+  padding: 16px;
+}
+
+/* The Close Button (x) prof div style과 같음 */
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .scancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+/* ---------------------------------------------------- */
+
+.column-img {
+  width: 48%;
+  /* border: 1px solid #000; */
+}
+
+.main-logo {
+  width: 100%;
+  height: auto;
+  /* main-log의 responsive image 이렇게 설정했는데 column-text는 어떻게 responsive 설정해야 하나?  */
+}
+
+.btn {
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgb(231, 54, 54);
+  cursor: pointer;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #0d0d0d;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+.btn:hover {
+  background-color: lightgrey;
+  color: #0d0d0d;
+}
+
+
+/* -----------<section class="container_2">------------- */
+.container_2 {
+  background: #f7f7f7;
+  /* border: 1px solid red; */
+}
+
+.prof h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #0d0d0d;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.prof {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+
+#leeImage,
+#hwangImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+
+#leeImage:hover,
+#hwangImage:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.leeModal,
+.hwangModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  padding-top: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.leeModal-content,
+.hwangModal-content {
+  background-color: #f1f1f1;
+  margin: auto;
+  padding: 20px;
+  width: 60%;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.leeModal-content h1,
+.hwangModal-content h1 {
+  font-size: 60px;
+  color: #0d0d0d;
+}
+
+.leeModal-content h2,
+.hwangModal-content h2 {
+  font-size: 35px;
+  color: #0d0d0d;
+}
+
+.leeModal-content h3,
+.hwangModal-content h3 {
+  font-size: 20px;
+  color: rgb(231, 54, 54);
+}
+
+.leeModal-content p,
+.hwangModal-content p {
+  font-size: 20px;
+  color: #424242;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* -----------<section class="container_3">------------- */
+/* .container_3 {
+  border: 1px solid #000;
+} */
+
+.video h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #0d0d0d;
+  text-align: center;
+}
+
+a.learn-more {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(231, 54, 54);
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
+
+a.learn-more:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgb(231, 54, 54);
+  text-decoration-thickness: 2px;
+  transition: 0.2s;
+}
+
+/* -----------<section class="container_4">------------- */
+
+.container_4 {
+  background-color: #f7f7f7;
+}
+
+.curriculum {
+  width: 80%;
+  margin: 0 auto;
+  /* text-align: center; */
+  /* 그 안의 자식의 width가 지정되면 text-align:center 부모에 주면 가운데 정렬됨
+  자식 자체에 width: 0 auto 는 필요없음 */
+}
+
+.curriculum h2 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: #0d0d0d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #f7f7f7;
+  color: #0d0d0d;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: 1px dashed #ccc;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px;
+  width: 100%;
+  display: none;
+  color: #424242;
+  background-color: white;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+@media only screen and (max-width :769px) {
+  .curriculum {
+    width: 100%;
+  }
+}
+
+/* -----------<section class="container_5">------------- */
+
+.programminglogos {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* -----------<section class="container_6">------------- */
+
+.container_6 {
+  background-color: #f7f7f7;
+}
+
+.footerWrapper {
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+}
+
+ul#footerGrid {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 15px;
+  text-align: left;
+  padding: 0px 20px;
+}
+
+#footerGrid h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-right: 34px;
+  color: #0d0d0d;
+}
+
+/* -----------<section class="container_7">------------- */
+
+.container_7 {
+  background-color: #f7f7f7;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+  text-align: left;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.legal a:visited, .legal a:link {
+  color: #212121;
+}
+
+.legal li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.language > select {
+  font-size: 14px;
+  font-weight: 500;
+  background: rgb(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 5px;
+  margin-right: 12px;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* 
+#footerGrid li {
+  display: block;
+  text-align: left;
+  line-height: 1.125em;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: -0.2px;
+  color: #757575 !important;
+} */
+
+/* .two-column {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 70px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("/img/building.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+
+.container-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ddd;
+}
+
+.container-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 16px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.container-text button:hover {
+  background-color: #555;
+  color: white;
+} */
+

@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  font-family: SFS, Arial, sans-serif;
+}
+
+:root {
+  --border-color: rgb(216, 221, 230);
+}
+
+.main {
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.wrapper {
+  padding: 20px 0px 0px;
+  margin: 0px auto;
+  max-width: 400px;
+}
+
+.content {
+  margin: 0px auto;
+  padding: 1.5rem;
+  border: 1px solid rgb(216, 221, 230);
+}
+
+.usernameEmail {
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  display: flex;
+}
+
+input[type=text] {
+  flex-grow: 6;
+  padding: 12px 20px;
+  display: inline-block;
+  border: transparent;
+}
+
+.email {
+  flex-grow: 4;
+  padding: 12px 20px;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #e2393b;
+  color: white;
+  font-weight: bold;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input[type=checkbox] {
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.footer {
+    position: relative;
+    margin-top: -24px; 
+    height: 24px;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    font-size: .8em;
+}
+
+@media only screen and (max-width: 480px) {
+.wrapper {
+    max-width: 100%;
+    margin-left: inherit;
+    padding-top: 20px !important;
+}
+}
+
+/* 
+맨 밑에 위치하기
+main : height 100vh
+footer : 
+  position: relative
+  margin-top: -24px; 
+  height: 24px;
+*/
