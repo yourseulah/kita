@@ -18,7 +18,7 @@ require "../util/dbconfig.php";
 //drop table if exists
 $sql = "DROP TABLE IF EXISTS employees";
 if ($conn->query($sql) == TRUE) {
-  if(DBG) echo outmsg(DROPTBL_SUCCESS);
+  if (DBG) echo outmsg(DROPTBL_SUCCESS);
 }
 
 //create table
@@ -51,6 +51,11 @@ if ($conn->query($sql) == TRUE) {
 } else {
   echo outmsg(CREATETBL_FAIL);
 }
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// } else {
+//   echo "Connected successfully";
+// }
 
 $sql = "alter table employees auto_increment=1001";
 $conn->query($sql);
@@ -59,8 +64,5 @@ $conn->query($sql);
 $conn->close();
 
 //direct to 
-echo "<a href='../customer/app_initiate.php'>Confirm</a>";
+echo "<a href='../customer/app_initiate.php'> Employee Table Created Confirm</a>";
 ?>
-
-
-

@@ -17,7 +17,7 @@ require "../util/dbconfig.php";
 //drop table if exists
 $sql = "DROP TABLE IF EXISTS offices";
 if ($conn->query($sql) == TRUE) {
-  if(DBG) echo outmsg(DROPTBL_SUCCESS);
+  if (DBG) echo outmsg(DROPTBL_SUCCESS);
 }
 
 //create table
@@ -65,8 +65,5 @@ if ($conn->query($sql) == TRUE) {
 $conn->close();
 
 //direct to 
-echo "<a href='../employees/app_initiate.php'>Confirm</a>";
+echo "<a href='../employees/app_initiate.php'> Office Table Created Confirm</a>";
 ?>
-
-
-

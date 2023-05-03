@@ -31,20 +31,20 @@ $conn = new mysqli($dbservername, $dbusername, $dbpassword);
 //check connection 
 if ($conn->connect_error) {
   echo outmsg(SERVERCONN_FAIL);
-  die ("Connection Fail : " .$conn->connect_error);
+  die("Connection Fail : " . $conn->connect_error);
 } else {
   if (DBG) echo outmsg(SERVERCONN_SUCCESS);
 }
 
 //if db exists, drop. same for user
-$sql = "DROP DATABASE IF EXISTS " .$dbname;
+$sql = "DROP DATABASE IF EXISTS " . $dbname;
 if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(DROPDB_SUCCESS);
 } else {
   if (DBG) echo outmsg(DROPDB_FAIL);
 }
 
-$sql = "DROP USER IF EXISTS " .$dbname;
+$sql = "DROP USER IF EXISTS " . $dbname;
 if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(DROPUSER_SUCCESS);
 } else {
@@ -58,7 +58,7 @@ if ($conn->query($sql) == TRUE) {
 // 4. 생성된 사용자 계정에 데이터베이스에 대한 모든 권한을 부여 
 
 //1. 사용자계정을 생성
-$sql = "CREATE USER IF NOT EXISTS '" .$dbname. "'@'%' IDENTIFIED BY '" .$dbname. "'";
+$sql = "CREATE USER IF NOT EXISTS '" . $dbname . "'@'%' IDENTIFIED BY '" . $dbname . "'";
 if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(CREATEUSER_SUCCESS);
 } else {
@@ -66,7 +66,7 @@ if ($conn->query($sql) == TRUE) {
 }
 
 //2. 리소스 제한 없이 사용하도록 권한 부여
-$sql = "GRANT USAGE ON *.* TO '" .$dbname. "'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0";
+$sql = "GRANT USAGE ON *.* TO '" . $dbname . "'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0";
 if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(LIMITRSC_SUCCESS);
 } else {
@@ -74,7 +74,7 @@ if ($conn->query($sql) == TRUE) {
 }
 
 //3. 데이터베이스 생성
-$sql = "CREATE DATABASE IF NOT EXISTS `" .$dbname. "`";
+$sql = "CREATE DATABASE IF NOT EXISTS `" . $dbname . "`";
 if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(CREATEDB_SUCCESS);
 } else {
@@ -82,20 +82,24 @@ if ($conn->query($sql) == TRUE) {
 }
 
 //4. 생성된 사용자 계정에 데이터베이스에 대한 모든 권한을 부여 
-$sql = "GRANT ALL PRIVILEGES ON `" .$dbname. "`.* TO '" .$dbname. "'@'%' identified by '".$dbname."'";
-if  ($conn->query($sql) == TRUE) {
+$sql = "GRANT ALL PRIVILEGES ON `" . $dbname . "`.* TO '" . $dbname . "'@'%' identified by '" . $dbname . "'";
+if ($conn->query($sql) == TRUE) {
   if (DBG) echo outmsg(GRANTUSER_SUCCESS);
 } else {
   echo outmsg(GRANTUSER_FAIL);
 }
-
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// } else {
+//   echo "Connected successfully";
+// }
 //db connection resource return
 $conn->close();
 
 //code complete message
-if(DBG) echo outmsg(COMMIT_CODE);
+if (DBG) echo outmsg(COMMIT_CODE);
 
-echo "<a href='../offices/app_initiate.php'>Confirm</a>" ;
+echo "<a href='../offices/app_initiate.php'>Confirm</a>";
 
 ?>
 

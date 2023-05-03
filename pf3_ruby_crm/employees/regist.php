@@ -34,39 +34,42 @@
           <!-- !!!!enctype MUST : $_FILES 읽기위한!!! -->
 
           <div class="name">
-          <input type="text" name="firstname" placeholder="First name" required />&nbsp;
-          <input type="text" name="lastname" placeholder="Last name" required />
+            <input type="text" name="firstname" placeholder="First name" required />&nbsp;
+            <input type="text" name="lastname" placeholder="Last name" required />
           </div>
-          
+
           <input type="text" name="username" placeholder="Username" required />
 
           <div class="password">
-          <input type="password" name="passwd" placeholder="Password" required />&nbsp;
-          <input type="password" name="cpasswd" placeholder="Confirm" required />
+            <input type="password" name="passwd" placeholder="Password" required />&nbsp;
+            <input type="password" name="cpasswd" placeholder="Confirm" required />
           </div>
 
           <div class="phone">
-          <input type="text" name="cellphone" placeholder="Cellphone" required />&nbsp;
-          <input type="text" name="extension" placeholder="Ext." />
-          </div> 
-        
+            <input type="text" name="cellphone" placeholder="Cellphone" required />&nbsp;
+            <input type="text" name="extension" placeholder="Ext." />
+          </div>
+
           <!-- email hidden, insert in the table concatenating with username -->
           <label>Birth Date</label>
           <input type="date" name="birthdate" />
           <label>Start date</label>
           <input type="date" name="startdate" />
-          
+
           <?php
           require "../util/dbconfig.php";
           $sql = "SELECT * FROM offices";
           $resultset = $conn->query($sql);
+          if (!$resultset) {
+            die("Error: " . $conn->error);
+          }
           ?>
 
           <label>Profile</label>
           <input type="file" size="60" name="upload">
 
           <select name='officecode'>
-          <option value="">Select Office</option>
+            <option value="">Select Office</option>
             <?php
             while ($row = $resultset->fetch_assoc()) {
             ?>
@@ -76,7 +79,7 @@
 
           <input type="text" name="reportsto" placeholder="Report To" />
           <input type="text" name="jobtitle" placeholder="Job title" />
-          
+
           <input type=submit value="Signup">
         </form>
 

@@ -19,7 +19,7 @@
           <div class="sb-nav-link-icon"><i class="fas fa-globe-asia"></i></div>
           Customers
         </a>
-        <div class="sb-sidenav-menu-heading">order</div>
+        <!-- <div class="sb-sidenav-menu-heading">order</div>
         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
           <div class="sb-nav-link-icon"><i class="fas fa-rocket"></i></div>
           Orders
@@ -59,9 +59,9 @@
               </nav>
             </div>
           </nav>
-        </div>
+        </div> -->
 
-        <div class="sb-sidenav-menu-heading">directory</div>
+        <div class="sb-sidenav-menu-heading">Management</div>
         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseEmployees" aria-expanded="false" aria-controls="collapseEmployees">
           <div class="sb-nav-link-icon"><i class="fas fa-id-badge"></i></div>
           Employees
@@ -80,7 +80,7 @@
     </div>
     <div class="sb-sidenav-footer">
       <div class="small">Logged in as:</div>
-      <?=$username?>
+      <?= $username ?>
     </div>
   </nav>
 </div>

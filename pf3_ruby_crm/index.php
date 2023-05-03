@@ -30,7 +30,7 @@ require_once './util/loginchk.php';
 <body>
   <div class="main">
     <div class="wrapper">
-      <div class="logo"><img src="./img/ruby.png" width="120" height="120" style="display: block;
+      <div class="logo"><img src="./img/sales.png" width="120" height="120" style="display: block;
         margin: 50px auto"></div>
       <div class="content">
         <form action="./employees/login_process.php" method="POST">

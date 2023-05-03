@@ -14,7 +14,7 @@ require "../util/dbconfig.php";
 //drop table if exists
 $sql = "DROP TABLE IF EXISTS customer";
 if ($conn->query($sql) == TRUE) {
-  if(DBG) echo outmsg(DROPTBL_SUCCESS);
+  if (DBG) echo outmsg(DROPTBL_SUCCESS);
 }
 
 //create table
@@ -41,7 +41,7 @@ $sql = "CREATE TABLE `customers` (
   PRIMARY KEY (`customerNumber`),
   KEY `salesRepEmployeeNumber` (`salesRepEmployeeNumber`),
   CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`salesRepEmployeeNumber`) REFERENCES `employees` (`employeeNumber`)
-) ENGINE=InnoDB CHARSET=utf8 COLLATE utf8_general_ci" ;
+) ENGINE=InnoDB CHARSET=utf8 COLLATE utf8_general_ci";
 
 //execute query
 if ($conn->query($sql) == TRUE) {
@@ -57,6 +57,5 @@ $conn->query($sql);
 $conn->close();
 
 //direct to
-echo "<a href='../index.php'>Confirm</a>";
+echo "<a href='../index.php'>Customer Table Created Confirm</a>";
 ?>
-

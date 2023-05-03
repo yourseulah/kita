@@ -12,13 +12,13 @@
 
 <?php
 //Project name 
-$toyappname = 'Portfolio_ERP';
+$toyappname = 'Portfolio_erp';
 //$toyappname = 'seulahlee'; //dothome용
 
 //server, user, pw, db define
 $dbservername = 'localhost';
-$dbusername = $toyappname;
-$dbpassword = $toyappname;
+$dbusername = 'root';
+$dbpassword = '';
 //$dbpassword = "Dltmfdk91#"; //dothome용
 $dbname = $toyappname;
 
@@ -31,9 +31,16 @@ $conn = new mysqli($dbservername, $dbusername, $dbpassword, $dbname);
 //check db connection
 if ($conn->connect_error) {
   echo outmsg(DBCONN_FAIL);
-  die("연결실패 : " .$conn->connect_error);
+  die($conn->connect_error);
 } else {
   if (DBG) echo outmsg(DBCONN_SUCCESS);
 }
+
+
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// } else {
+//   echo "Connected successfully";
+// }
 
 ?>
